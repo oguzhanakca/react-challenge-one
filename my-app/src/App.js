@@ -1,10 +1,10 @@
 import css from "./App.module.css";
-import Content from "./components/Content";
+import ContentHooks from "./components/Content";
 
 function App() {
   return (
     <div className={css.App}>
-      <Content />
+      <ContentHooks />
     </div>
   );
 }

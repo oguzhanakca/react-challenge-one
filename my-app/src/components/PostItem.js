@@ -3,13 +3,12 @@ import css from "./css/PostItem.module.css";
 
 function PostItem(props) {
   return props.posts.map((post) => {
-    const { title, name, image, description } = post;
     return (
-      <div className={css.SearchItem} key={title}>
-        <p>{title}</p>
-        <p>{name}</p>
-        <img src={image} alt="random" />
-        <p>{description}</p>
+      <div className={css.SearchItem} key={post.id}>
+        <p>Art Type: {post.type}</p>
+        <p>Artist: {post.user}</p>
+        <img src={post.webformatURL} alt="random" />
+        <p>Tags: {post.tags}</p>
       </div>
     );
   });
